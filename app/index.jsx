@@ -1,21 +1,17 @@
+import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { Link } from 'expo-router'
 
 const App = () => {
   return (
-    <View style={styles.container}>
+    <View className="flex-1 items-center justify-center bg-white">
       <Text>Aora</Text>
+      <StatusBar style='auto'/>
+      <Link href='/profile' style={{color:'blue'}}> Go to Profile......</Link>
     </View>
   )
 }
 
 export default App
 
-const styles = StyleSheet.create({
-    container:{
-        display:'flex',
-        flex:1,
-        alignItems:'center',
-        justifyContent:'center'
-    }
-})
